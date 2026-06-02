@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Arial Black',Arial,sans-serif}
+  html,body{width:512px;height:512px;overflow:hidden}
+  .ic{width:512px;height:512px;position:relative;
+    background:linear-gradient(150deg,#1e9e54 0%,#137a3e 55%,#0a5028 100%);
+    display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .circle{position:absolute;left:50%;top:42%;width:330px;height:330px;margin:-165px 0 0 -165px;border:7px solid rgba(255,255,255,.14);border-radius:50%}
+  /* trophy behind ball */
+  .trophy{position:absolute;top:36px;left:50%;transform:translateX(-50%);font-size:120px;line-height:1;color:#ffd23f;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35));z-index:1;opacity:.96}
+  .ball{width:236px;height:236px;border-radius:50%;position:relative;z-index:2;margin-top:40px;
+    background:radial-gradient(circle at 38% 32%,#fff,#e9eef2 60%,#cfd8dd 100%);
+    box-shadow:0 16px 34px rgba(0,0,0,.45)}
+  .p{position:absolute;background:#15151c;clip-path:polygon(50% 0,95% 35%,78% 90%,22% 90%,5% 35%)}
+  .pc{width:74px;height:70px;left:81px;top:74px}
+  .p1{width:48px;height:45px;left:24px;top:50px;transform:rotate(-12deg)}
+  .p2{width:48px;height:45px;right:24px;top:50px;left:auto;transform:rotate(12deg)}
+  .p3{width:48px;height:45px;left:48px;bottom:28px;top:auto;transform:rotate(150deg)}
+  .p4{width:48px;height:45px;right:48px;bottom:28px;left:auto;top:auto;transform:rotate(-150deg)}
+  .year{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;
+    background:#ffd23f;color:#0a5028;font-size:52px;font-weight:900;letter-spacing:1px;
+    padding:4px 22px;border-radius:14px;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+</style></head><body>
+  <div class="ic">
+    <div class="circle"></div>
+    <div class="trophy">🏆</div>
+    <div class="ball">
+      <div class="p pc"></div><div class="p p1"></div><div class="p p2"></div>
+      <div class="p p3"></div><div class="p p4"></div>
+    </div>
+    <div class="year">2026</div>
+  </div>
+</body></html>

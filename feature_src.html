@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+  html,body{width:1024px;height:500px;overflow:hidden}
+  .wrap{width:1024px;height:500px;position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#1e9e54 0%,#0c5e2f 100%)}
+  .lines{position:absolute;inset:0;opacity:.16}
+  .lines .c{position:absolute;right:-90px;top:50%;width:360px;height:360px;margin-top:-180px;border:8px solid #fff;border-radius:50%}
+  .lines .v{position:absolute;right:90px;top:0;height:100%;width:8px;background:#fff}
+  .left{position:absolute;left:64px;top:0;height:500px;display:flex;flex-direction:column;justify-content:center;width:620px}
+  h1{color:#fff;font-size:96px;font-weight:900;line-height:.92;letter-spacing:-2px;text-shadow:0 4px 14px rgba(0,0,0,.35)}
+  h1 .y{color:#ffd54a}
+  .sub{margin-top:18px;color:#eafff1;font-size:33px;font-weight:600}
+  .chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;max-width:600px}
+  .chip{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.35);
+    padding:7px 16px;border-radius:20px;font-size:19px;font-weight:600}
+  .ball{position:absolute;right:70px;top:50%;width:300px;height:300px;margin-top:-150px;border-radius:50%;
+    background:radial-gradient(circle at 38% 32%,#fff,#e9eef2 60%,#cfd8dd 100%);
+    box-shadow:0 22px 50px rgba(0,0,0,.45)}
+  .p{position:absolute;background:#15151c;clip-path:polygon(50% 0,95% 35%,78% 90%,22% 90%,5% 35%)}
+  .pc{width:92px;height:86px;left:104px;top:96px}
+  .p1{width:58px;height:54px;left:34px;top:64px;transform:rotate(-12deg)}
+  .p2{width:58px;height:54px;right:34px;top:64px;left:auto;transform:rotate(12deg)}
+  .p3{width:58px;height:54px;left:64px;bottom:36px;top:auto;transform:rotate(150deg)}
+  .p4{width:58px;height:54px;right:64px;bottom:36px;left:auto;top:auto;transform:rotate(-150deg)}
+</style></head><body>
+  <div class="wrap">
+    <div class="lines"><div class="v"></div><div class="c"></div></div>
+    <div class="left">
+      <h1>Live <span class="y">Football</span></h1>
+      <div class="sub" style="color:#ffd23f;font-weight:800;font-size:37px;margin-top:10px;">🏆 World Cup 2026 · Live Scores</div>
+      <div class="chips">
+        <span class="chip">Champions League</span><span class="chip">Premier League</span>
+        <span class="chip">La Liga</span><span class="chip">Serie A</span>
+        <span class="chip">Standings</span><span class="chip">News</span>
+      </div>
+    </div>
+    <div class="ball">
+      <div class="p pc"></div><div class="p p1"></div><div class="p p2"></div>
+      <div class="p p3"></div><div class="p p4"></div>
+    </div>
+  </div>
+</body></html>
