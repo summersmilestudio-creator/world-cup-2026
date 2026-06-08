@@ -2,7 +2,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
     <application
-        android:label="World Cup 2026: Live Score"
+        android:label="Football 2026: Live Scores"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <!-- AdMob app ID — currently Google's TEST app ID; replace with real one after Play upload. -->

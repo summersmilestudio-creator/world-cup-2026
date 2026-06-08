@@ -30,9 +30,9 @@ class AppStrings {
 
   static const Map<String, Map<String, String>> _data = {
     'appName': {
-      'en': 'World Cup 2026: Live Score', 'es': 'Mundial 2026: Resultados en Vivo', 'fr': 'Coupe du Monde 2026: Scores',
-      'ar': 'كأس العالم 2026: نتائج مباشرة', 'pt': 'Copa do Mundo 2026: Placar', 'de': 'WM 2026: Live-Ergebnisse',
-      'it': 'Mondiali 2026: Risultati', 'ru': 'ЧМ 2026: счёт Live', 'zh': '世界杯2026：实时比分', 'hi': 'वर्ल्ड कप 2026: लाइव स्कोर',
+      'en': 'Football 2026: Live Scores', 'es': 'Fútbol 2026: Resultados en Vivo', 'fr': 'Football 2026: Scores en Direct',
+      'ar': 'كرة القدم 2026: نتائج مباشرة', 'pt': 'Futebol 2026: Placar ao Vivo', 'de': 'Fußball 2026: Live-Ergebnisse',
+      'it': 'Calcio 2026: Risultati Live', 'ru': 'Футбол 2026: счёт Live', 'zh': '足球2026：实时比分', 'hi': 'फुटबॉल 2026: लाइव स्कोर',
     },
     'tabLive': {
       'en': 'Live', 'es': 'En vivo', 'fr': 'En direct', 'ar': 'مباشر', 'pt': 'Ao vivo',
