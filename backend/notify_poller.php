@@ -1,6 +1,6 @@
 <?php
 /**
- * notify_poller.php — World Cup 2026: Live Score
+ * notify_poller.php — Football 2026: Live Score
  * Polls football-data.org for in-play matches, detects events by comparing
  * against the previous snapshot, and pushes FCM notifications to per-match topics.
  *
@@ -27,7 +27,7 @@ const FCM_SA_FILE  = __DIR__ . '/fcm-service-account.json';
 const FCM_PROJECT  = 'PUT_FIREBASE_PROJECT_ID_HERE';
 
 // Competitions to watch for live matches (free-tier covered).
-const COMPS = ['WC', 'CL', 'PL', 'PD', 'BL1', 'SA', 'FL1', 'EC'];
+const COMPS = ['CL', 'PL', 'PD', 'BL1', 'SA', 'FL1', 'EC'];
 
 // ---- guards ----------------------------------------------------------------
 if (php_sapi_name() !== 'cli') {

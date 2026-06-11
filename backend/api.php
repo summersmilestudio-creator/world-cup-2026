@@ -4,16 +4,16 @@
  * Deploy to: summer-smile.ro/football/api.php  (Hostico)
  *
  * Data source: football-data.org v4 (free tier). Free tier covers the CURRENT
- * season of 12 major competitions incl. FIFA World Cup 2026 — so the app works
- * long-term, not just during one tournament. The token is hidden here; the app
+ * season of major club competitions and leagues — so the app works
+ * long-term. The token is hidden here; the app
  * only ever calls THIS proxy, which caches responses to protect the rate limit
  * (free = 10 req/min) across all users.
  *
  * Endpoints (GET):
  *   ?action=competitions               -> available competitions
- *   ?action=live&comp=WC               -> in-play matches for a competition
- *   ?action=matches&comp=WC            -> fixtures (recent + upcoming)
- *   ?action=standings&comp=WC          -> standings table
+ *   ?action=live&comp=CL               -> in-play matches for a competition
+ *   ?action=matches&comp=CL            -> fixtures (recent + upcoming)
+ *   ?action=standings&comp=CL          -> standings table
  *   ?action=news&lang=xx               -> aggregated football news (RSS)
  */
 
@@ -28,7 +28,6 @@ const CACHE_DIR = __DIR__ . '/cache';
 
 // Competitions exposed by the app (free-tier codes). Order = display order.
 const COMPETITIONS = [
-    ['code' => 'WC',  'name' => 'World Cup'],
     ['code' => 'CL',  'name' => 'Champions League'],
     ['code' => 'PL',  'name' => 'Premier League'],
     ['code' => 'PD',  'name' => 'La Liga'],
@@ -47,9 +46,9 @@ const TTL = ['live' => 30, 'matches' => 300, 'standings' => 600, 'news' => 900, 
 // ---- ROUTER -----------------------------------------------------------------
 if (!is_dir(CACHE_DIR)) @mkdir(CACHE_DIR, 0775, true);
 $action = preg_replace('/[^a-z]/', '', $_GET['action'] ?? '');
-$comp   = preg_replace('/[^A-Z0-9]/', '', strtoupper($_GET['comp'] ?? 'WC'));
+$comp   = preg_replace('/[^A-Z0-9]/', '', strtoupper($_GET['comp'] ?? 'CL'));
 $lang   = substr(preg_replace('/[^a-zA-Z\-]/', '', $_GET['lang'] ?? 'en'), 0, 2);
-if (!in_array($comp, array_column(COMPETITIONS, 'code'), true)) $comp = 'WC';
+if (!in_array($comp, array_column(COMPETITIONS, 'code'), true)) $comp = 'CL';
 
 try {
     switch ($action) {

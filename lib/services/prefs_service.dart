@@ -10,7 +10,7 @@ class PrefsService extends ChangeNotifier {
   static const _kComp = 'comp_code';
 
   Locale? _locale;
-  String _comp = 'WC'; // default: World Cup
+  String _comp = 'CL'; // default: Champions League
   Locale? get locale => _locale;
   String get comp => _comp;
 
@@ -18,7 +18,8 @@ class PrefsService extends ChangeNotifier {
     final p = await SharedPreferences.getInstance();
     final code = p.getString(_kLang);
     if (code != null) _locale = Locale(code);
-    _comp = p.getString(_kComp) ?? 'WC';
+    _comp = p.getString(_kComp) ?? 'CL';
+    if (_comp == 'WC') _comp = 'CL'; // migrate away from removed World Cup
   }
 
   Future<void> setLanguage(String code) async {

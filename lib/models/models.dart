@@ -12,7 +12,6 @@ class Competition {
   /// Built-in fallback list (matches backend COMPETITIONS) so the picker works
   /// even before the competitions endpoint responds.
   static const List<Competition> fallback = [
-    Competition('WC', 'World Cup'),
     Competition('CL', 'Champions League'),
     Competition('PL', 'Premier League'),
     Competition('PD', 'La Liga'),
