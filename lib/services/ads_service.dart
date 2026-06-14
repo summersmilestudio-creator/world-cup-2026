@@ -7,16 +7,23 @@ class AdsService {
   AdsService._();
   static final AdsService instance = AdsService._();
 
-  // Google official TEST IDs — replace with real units once the app is live.
+  // Google official TEST IDs (folosite DOAR pe iOS până creăm AdMob iOS real).
   static const String _testBanner = 'ca-app-pub-3940256099942544/6300978111';
   static const String _testInterstitial = 'ca-app-pub-3940256099942544/1033173712';
+
+  // Unități REALE Android (AdMob app Football 2026 Live Android, ~3760189717),
+  // create 2026-06-14. Obligatoriu reale în producție (test ads = risc ban).
+  static const String _androidBanner = 'ca-app-pub-5549243085914479/9180037355';
+  static const String _androidInterstitial =
+      'ca-app-pub-5549243085914479/6394091914';
 
   bool _ready = false;
   InterstitialAd? _interstitial;
   int _matchesOpened = 0;
 
-  String get bannerUnitId => _testBanner; // TODO real unit
-  String get interstitialUnitId => _testInterstitial; // TODO real unit
+  String get bannerUnitId => Platform.isAndroid ? _androidBanner : _testBanner;
+  String get interstitialUnitId =>
+      Platform.isAndroid ? _androidInterstitial : _testInterstitial;
 
   Future<void> init() async {
     if (!(Platform.isAndroid || Platform.isIOS)) return;
